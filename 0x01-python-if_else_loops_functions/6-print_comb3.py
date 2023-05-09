@@ -6,3 +6,4 @@ for i in range(9):
             print(", ", end="")
         a += 1
     i += 1
+print()
