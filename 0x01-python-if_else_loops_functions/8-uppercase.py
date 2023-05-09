@@ -5,3 +5,4 @@ def uppercase(str):
         if (c - 32 >= 65):
             c -= 32
         print("{}".format(chr(c)), end="")
+    print()
