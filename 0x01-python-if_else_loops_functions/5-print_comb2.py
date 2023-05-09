@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-for i in range(10):
-    for a in range(0, 10):
-        if i != 9 or a != 9:
-            print("{}{}, ".format(i, a), end="")
-        else:
-            print("{}{}".format(i, a), end="")
-        a += 1
-    i += 1
+for i in range(100):
+    if (i == 99):
+        print(i)
+    else:
+        print("{:02}".format(i), end=", ")
