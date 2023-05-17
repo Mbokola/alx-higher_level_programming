@@ -26,7 +26,6 @@ void print_python_bytes(PyObject *p)
 			printf("  first 10 bytes: ");
 		for  (i = 0; size; i++)
 		{
-			printf("kkkkkkkkkkk     %d\n", i);
 			if (i > 9)
 				break;
 			printf("%02hhx ", str[i]);
