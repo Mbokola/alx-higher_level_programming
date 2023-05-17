@@ -11,15 +11,14 @@
 void print_python_bytes(PyObject *p)
 {
 	Py_ssize_t size;
-	const char *str;
+	char *str;
 	int i;
 
 	printf("[.] bytes object info\n");
 	if (PyBytes_Check(p))
 	{
-		size = PyBytes_GET_SIZE(p);
+		PyBytes_AsStringAndSize(p, &str, &size);
 		printf("  size: %zd\n", size);
-		str = PyBytes_AS_STRING(p);
 		printf("  trying string: %s\n", str);
 		if (size < 10)
 			printf("  first %lu bytes: ", size + 1);
