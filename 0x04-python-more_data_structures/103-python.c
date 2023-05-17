@@ -24,15 +24,13 @@ void print_python_bytes(PyObject *p)
 			printf("  first %lu bytes: ", size + 1);
 		else
 			printf("  first 10 bytes: ");
-		for  (i = 0; size; i++)
+		for  (i = 0; size + 1; i++)
 		{
 			if (i > 9)
 				break;
 			printf("%02hhx ", str[i]);
 			size--;
 		}
-		if (i < 9)
-			printf("00");
 		printf("\n");
 	}
 	else
@@ -67,7 +65,7 @@ void print_python_list(PyObject *p)
 				type = PyObject_Type(item);
 				name = PyObject_GetAttrString(type, "__name__");
 				typename = PyUnicode_AsUTF8(name);
-				printf("Element %zd: %s\n",i, typename);
+				printf("Element %zd: %s\n", i, typename);
 				if (!strcmp(typename, "bytes"))
 					print_python_bytes(item);
 
