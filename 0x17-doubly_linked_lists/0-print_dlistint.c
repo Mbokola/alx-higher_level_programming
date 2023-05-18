@@ -1,4 +1,4 @@
-t#include "lists.h"
+#include "lists.h"
 /**
  *print_dlistint - prints elements in a list
  *@h: pointer to list
