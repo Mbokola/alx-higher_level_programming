@@ -10,5 +10,5 @@ Write a function that prints a dictionary by ordered keys.
 
 
 def print_sorted_dictionary(a_dictionary):
-    for k in sorted(a_dictionary):
-        print(k)
+    for k, v in sorted(a_dictionary.items()):
+        print(k, v)
