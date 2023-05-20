@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-print_sorted_dictionary = __import__('6-print_sorted_dictionary').print_sorted_dictionary
+import ctypes
 
-a_dictionary = { 'language': "C", 'Number': 89, 'track': "Low level", 'ids': [1, 2, 3] }
-print_sorted_dictionary(a_dictionary)
+lib = ctypes.CDLL('./libPythonHBTN.so')
+lib.print_python_list.argtypes = [ctypes.py_object]
+lib.print_python_bytes.argtypes = [ctypes.py_object]
+b = b'What does the \'b\' character do in front of a string literal?';
+lib.print_python_bytes(b);

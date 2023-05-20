@@ -14,29 +14,32 @@ void print_python_bytes(PyObject *p)
 	char *str;
 	int i;
 
-	printf("[.] bytes object info\n");
-	if (PyBytes_Check(p))
+	if (p)
 	{
-		PyBytes_AsStringAndSize(p, &str, &size);
-		printf("  size: %zd\n", size);
-		printf("  trying string: %s\n", str);
-		if (size < 10)
-			printf("  first %lu bytes: ", size + 1);
-		else
-			printf("  first 10 bytes: ");
-		for  (i = 0; size; i++)
+		printf("[.] bytes object info\n");
+		if (PyBytes_Check(p))
 		{
-			if (i > 9)
-				break;
-			printf("%02hhx ", str[i]);
-			size--;
+			PyBytes_AsStringAndSize(p, &str, &size);
+			printf("  size: %zd\n", size);
+			printf("  trying string: %s\n", str);
+			if (size < 10)
+				printf("  first %lu bytes: ", size + 1);
+			else
+				printf("  first 10 bytes: ");
+			for  (i = 0; size; i++)
+			{
+				if (i > 9)
+					break;
+				printf("%02hhx ", str[i]);
+				size--;
+			}
+			if (i < 9)
+				printf("00");
+			printf("\n");
 		}
-		if (i < 9)
-			printf("00");
-		printf("\n");
+		else
+			printf("  [ERROR] Invalid Bytes Object\n");
 	}
-	else
-		printf("  [ERROR] Invalid Bytes Object\n");
 }
 
 /**
@@ -52,25 +55,28 @@ void print_python_list(PyObject *p)
 	PyListObject *listObj = (PyListObject *)p;
 	PyObject *item, *type, *name;
 
-	if (PyList_Check(p))
+	if (p)
 	{
-		printf("[*] Python list info\n");
-		size = PyList_GET_SIZE(p);
-		printf("[*] Size of the Python List = %zd\n", size);
-		alloc = listObj->allocated;
-		printf("[*] Allocated = %zd\n", alloc);
-		if (size)
+		if (PyList_Check(p))
 		{
-			for (i = 0; i < size; i++)
+			printf("[*] Python list info\n");
+			size = PyList_GET_SIZE(p);
+			printf("[*] Size of the Python List = %zd\n", size);
+			alloc = listObj->allocated;
+			printf("[*] Allocated = %zd\n", alloc);
+			if (size)
 			{
-				item = PyList_GET_ITEM(p, i);
-				type = PyObject_Type(item);
-				name = PyObject_GetAttrString(type, "__name__");
-				typename = PyUnicode_AsUTF8(name);
-				printf("Element %zd: %s\n",i, typename);
-				if (!strcmp(typename, "bytes"))
-					print_python_bytes(item);
+				for (i = 0; i < size; i++)
+				{
+					item = PyList_GET_ITEM(p, i);
+					type = PyObject_Type(item);
+					name = PyObject_GetAttrString(type, "__name__");
+					typename = PyUnicode_AsUTF8(name);
+					printf("Element %zd: %s\n",i, typename);
+					if (!strcmp(typename, "bytes"))
+						print_python_bytes(item);
 
+				}
 			}
 		}
 	}
