@@ -1,0 +1,9 @@
+*
+!*.md
+!*.c
+!*.h
+!*.py
+!.gitignore
+*test*
+*Test*
+*#*
