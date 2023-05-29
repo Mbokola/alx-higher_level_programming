@@ -8,6 +8,7 @@ def safe_print_list_integers(my_list=[], x=0):
                 x -= 1
                 j += 1
             except Exception:
+                x -= 1
                 pass
     if (x):
         raise IndexError
