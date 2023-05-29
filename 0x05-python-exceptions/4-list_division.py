@@ -17,8 +17,4 @@ def list_division(my_list_1, my_list_2, list_length):
         finally:
             pass
         new.append(temp_result)
-
-    if len(my_list_1) > list_length:
-        new.extend([0] * (len(my_list_1) - list_length))
-
     return new
