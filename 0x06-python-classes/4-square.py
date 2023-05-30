@@ -6,7 +6,7 @@ class Square:
     """ The Square Class """
     def __init__(self, size=0):
         """ Class Instantiation """
-        self.__size = size
+        self.size = size
 
     def area(self):
         """ Calulates area of a square """
