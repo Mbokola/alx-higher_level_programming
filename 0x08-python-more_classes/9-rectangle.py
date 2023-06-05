@@ -83,3 +83,11 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """used to create a
+        square within the class
+        rectangle
+        """
+        return cls(size, size)
