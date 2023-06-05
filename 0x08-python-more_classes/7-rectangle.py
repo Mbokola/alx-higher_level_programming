@@ -16,11 +16,9 @@ class Rectangle:
         Rectangle.number_of_instances += 1
 
     def __str__(self):
-        if self.__width == 0 or self.__height == 0:
-            return ''
         string = ""
         for _ in range(self.height):
-            string += Rectangle.print_symbol * self.width + '\n'
+            string += str(self.print_symbol) * self.width + '\n'
         return string.rstrip('\n')
 
     def __repr__(self):
