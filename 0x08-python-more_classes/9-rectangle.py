@@ -18,13 +18,11 @@ class Rectangle:
     def __str__(self):
         string = ""
         for _ in range(self.height):
-            string += Rectangle.print_symbol * self.width + '\n'
+            string += str(self.print_symbol) * self.width + '\n'
         return string.rstrip('\n')
 
     def __repr__(self):
-        rect = "Rectangle(" + str(self.__width)
-        rect += ", " + str(self.__height) + ")"
-        return (rect)
+        return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
         print("Bye rectangle...")
