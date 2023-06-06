@@ -1,0 +1,21 @@
+The ``5-text_indentation`` module
+==================================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("This is a test.")
+This is a test.
+<BLANKLINE>
+>>> text_indentation("I love Python.")
+I love Python.
+<BLANKLINE>
+>>> text_indentation("Why so serious?")
+Why so serious?
+<BLANKLINE>
+>>> text_indentation("No space after colon:")
+No space after colon:
+<BLANKLINE>
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
