@@ -7,7 +7,8 @@ Using 'add_integer'
 
 Import the module
 >>> add_integer = __import__('0-add_integer').add_integer
-
+>>> add_integer(1e-1000)
+98
 >>> print(add_integer(1, 2))
 3
 >>> print(add_integer(100, -2))
@@ -16,6 +17,10 @@ Import the module
 100
 >>> print(add_integer(100.3, -2))
 98
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+	  ...
+ValueError: cannot convert float NaN to integer
 >>> print(add_integer('String', -2))
 Traceback (most recent call last):
 	  ...
