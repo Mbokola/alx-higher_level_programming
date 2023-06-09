@@ -7,6 +7,10 @@ Using 'add_integer'
 
 Import the module
 >>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1e1000)
+Traceback (most recent call last):
+	  ...
+OverflowError: cannot convert float infinity to integer
 >>> add_integer(1e-1000)
 98
 >>> print(add_integer(1, 2))
