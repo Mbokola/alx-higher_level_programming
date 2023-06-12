@@ -5,6 +5,7 @@
 !*.h
 !.gitignore
 !*.py
-*test*
-*Test*
+!*tests
+!*.txt
+test.py
 *#*
