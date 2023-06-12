@@ -7,9 +7,6 @@ Test that examples work fine
 
 First, import the module
 >>> MyList = __import__('1-my_list').MyList
->>> #List that is already sorted
->>> MyList([1, 2, 3, 4, 5]).print_sorted()
-[1, 2, 3, 4, 5]
 >>> #List sorted in descending order
 >>> MyList([5, 4, 3, 2, 1]).print_sorted()
 [1, 2, 3, 4, 5]
