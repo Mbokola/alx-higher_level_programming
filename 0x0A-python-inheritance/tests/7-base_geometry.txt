@@ -11,9 +11,7 @@ Usage
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
-
 >>> bg.integer_validator("width", 89)
-
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
 	  ...
@@ -34,3 +32,23 @@ TypeError: people must be an integer
 Traceback (most recent call last):
           ...
 TypeError: length must be an integer
+>>> bg.area()
+Traceback (most recent call last):
+          ...
+Exception: area() is not implemented
+>>> bg.integer_validator("Height")
+Traceback (most recent call last):
+          ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+>>> bg.integer_validator("Big numumber", 10e100)
+Traceback (most recent call last):
+	  ...
+TypeError: Big numumber must be an integer
+>>> bg.integer_validator("List", [4, 5])
+Traceback (most recent call last):
+          ...
+TypeError: List must be an integer
+>>> bg.integer_validator("None", None)
+Traceback (most recent call last):
+          ...
+TypeError: None must be an integer
