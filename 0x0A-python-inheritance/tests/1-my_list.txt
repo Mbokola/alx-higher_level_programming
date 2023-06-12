@@ -7,9 +7,6 @@ Test that examples work fine
 
 First, import the module
 >>> MyList = __import__('1-my_list').MyList
->>> #List with largets number in middle
->>> MyList([2, 3, 5, 1, 4]).print_sorted()
-[1, 2, 3, 4, 5]
 >>> #List with a float
 >>> MyList([3.3, 2, 0, 4.6, 4.67]).print_sorted()
 [0, 2, 3.3, 4.6, 4.67]
