@@ -20,5 +20,10 @@ First, import the module
 []
 >>> MyList([42]).print_sorted()
 [42]
->>> MyList("string")
-['s', 't', 'r', 'i', 'n', 'g']
+>>> mylist = MyList([5, 4, 3, 2, 1])
+>>> mylist.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(mylist)
+[5, 4, 3, 2, 1]
+>>> MyList([0, 0, 0])
+[0, 0, 0]
