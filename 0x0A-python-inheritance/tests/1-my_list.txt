@@ -16,14 +16,18 @@ First, import the module
 >>> #Mixed
 >>> MyList([-5.4, -5, 2, 2.3])
 [-5.4, -5, 2, 2.3]
->>> MyList([]).print_sorted()
+>>> #Empty list
+>>> MyList().print_sorted()
 []
+>>> #one item
 >>> MyList([42]).print_sorted()
 [42]
+>>> #Original list
 >>> mylist = MyList([5, 4, 3, 2, 1])
 >>> mylist.print_sorted()
 [1, 2, 3, 4, 5]
 >>> print(mylist)
 [5, 4, 3, 2, 1]
+>>> #All Zeros
 >>> MyList([0, 0, 0])
 [0, 0, 0]
