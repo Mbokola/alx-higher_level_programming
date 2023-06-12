@@ -20,3 +20,5 @@ First, import the module
 []
 >>> MyList([42]).print_sorted()
 [42]
+>>> MyList("string")
+['s', 't', 'r', 'i', 'n', 'g']
