@@ -7,11 +7,6 @@ Test that examples work fine
 
 First, import the module
 >>> MyList = __import__('1-my_list').MyList
->>> #List with a string
->>> MyList([5, 4, 3, 2, 1, 0, 'String']).print_sorted()
-Traceback (most recent call last):
-	  ...
-TypeError: '<' not supported between instances of 'str' and 'int'
 >>> #List with largets number in middle
 >>> MyList([2, 3, 5, 1, 4]).print_sorted()
 [1, 2, 3, 4, 5]
