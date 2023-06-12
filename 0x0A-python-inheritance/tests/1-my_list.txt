@@ -27,3 +27,12 @@ TypeError: '<' not supported between instances of 'str' and 'int'
 >>> #List with a float
 >>> MyList([3.3, 2, 0, 4.6, 4.67]).print_sorted()
 [0, 2, 3.3, 4.6, 4.67]
+>>> #Negative numbers
+>>> MyList([-1, -2, -3, -4, -5]).print_sorted()
+[-5, -4, -3, -2, -1]
+>>> #Positive and negative
+>>> MyList([-1, -7, 2, 1]).print_sorted()
+[-7, -1, 1, 2]
+>>> #Mixed
+>>> MyList([-5.4, -5, 2, 2.3])
+[-5.4, -5, 2, 2.3]
