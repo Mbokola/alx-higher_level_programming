@@ -56,3 +56,11 @@ TypeError: None must be an integer
 Traceback (most recent call last):
           ...
 TypeError: Dict must be an integer
+>>> bg.integer_validator("Tuple", (2, 3))
+Traceback (most recent call last):
+          ...
+TypeError: Tuple must be an integer
+>>> bg.integer_validator("NaN", float('nan'))
+Traceback (most recent call last):
+          ...
+TypeError: NaN must be an integer
