@@ -52,3 +52,7 @@ TypeError: List must be an integer
 Traceback (most recent call last):
           ...
 TypeError: None must be an integer
+>>> bg.integer_validator("Dict", {"Key", 4})
+Traceback (most recent call last):
+          ...
+TypeError: Dict must be an integer
