@@ -20,5 +20,6 @@ class Student:
                 mydict["last_name"] = self.last_name
             if ("age" in attrs):
                 mydict["age"] = self.age
-            return mydict
+            if mydict:
+                return mydict
         return self.__dict__
