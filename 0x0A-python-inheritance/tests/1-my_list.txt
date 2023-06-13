@@ -31,3 +31,7 @@ First, import the module
 >>> #All Zeros
 >>> MyList([0, 0, 0])
 [0, 0, 0]
+>>> #Append to list
+>>> mylist.append(6)
+>>> mylist.print_sorted()
+[1, 2, 3, 4, 5, 6]
