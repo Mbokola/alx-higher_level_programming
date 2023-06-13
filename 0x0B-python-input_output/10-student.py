@@ -12,8 +12,8 @@ class Student:
 
     def to_json(self, attrs=None):
         """ Dictionary representation of class atrributes """
-        mydict = {}
         if attrs:
+            mydict = {}
             if ("first_name" in attrs):
                 mydict["first_name"] = self.first_name
             if ("last_name" in attrs):
