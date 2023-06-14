@@ -5,8 +5,8 @@
 def pascal_triangle(n):
     """ Creates pascals trinangle of size n """
 
-    # create an empty list of list
-    mylist = [[]]
+    # create an empty list
+    mylist = []
     # if n <= 0 return empty list
     if n <= 0:
         return mylist
