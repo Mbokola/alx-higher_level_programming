@@ -3,8 +3,6 @@
 import unittest
 from models.square import Square
 from models.base import Base
-from io import StringIO
-import sys
 
 
 class TestSquare(unittest.TestCase):

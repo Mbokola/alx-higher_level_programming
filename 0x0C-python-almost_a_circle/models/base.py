@@ -74,7 +74,7 @@ class Base:
     def load_from_file_csv(cls):
         """ Deserialize instance from csv file """
         filename = cls.__name__ + ".csv"
-        instances  = []
+        instances = []
         with open(filename, 'r') as f:
             content = csv.reader(f)
             for row in content:
