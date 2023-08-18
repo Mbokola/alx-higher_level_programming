@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-
-import sys
-import MySQLdb
-
-mysql_username = sys.argv[1]
-mysql_password = sys.argv[2]
-database_name = sys.argv[3]
-host = 'localhost'
-
 if __name__ == '__main__':
+    import sys
+    import MySQLdb
+
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
+    host = 'localhost'
+
     db = MySQLdb.connect(host=host, user=mysql_username, passwd=mysql_password,
                          db=database_name, port=3306)
 
