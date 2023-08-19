@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Start link class to table in database """
+""" 8-model_state_fetch_first module """
 
 if __name__ == "__main__":
     import sys
@@ -15,7 +15,5 @@ localhost/{sys.argv[3]}', echo=False)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states_sorted_by_id = session.query(State).order_by(State.id).all()
-    for state in states_sorted_by_id:
-        print(f'{state.id}: {state.name}')
-        break
+    first = session.query(State).first()
+    print(f'{first.id}: {first.name}')
