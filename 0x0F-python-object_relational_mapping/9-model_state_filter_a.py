@@ -15,6 +15,7 @@ localhost/{sys.argv[3]}')
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states_sorted_by_id = session.query(State).order_by(State.id).filter(State.name.like('%a%')).all()
+    states_sorted_by_id = session.query(State).order_by(State.id).\
+        filter(State.name.like('%a%')).all()
     for state in states_sorted_by_id:
         print(f'{state.id}: {state.name}')
