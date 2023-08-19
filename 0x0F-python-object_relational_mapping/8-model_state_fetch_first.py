@@ -18,3 +18,7 @@ localhost/{sys.argv[3]}', echo=False)
     first = session.query(State).first()
     if first:
         print(f'{first.id}: {first.name}')
+    else:
+        print('Nothing')
+
+    session.close()
