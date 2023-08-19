@@ -16,4 +16,5 @@ localhost/{sys.argv[3]}', echo=False)
     session = Session()
 
     first = session.query(State).first()
-    print(f'{first.id}: {first.name}')
+    if first:
+        print(f'{first.id}: {first.name}')
