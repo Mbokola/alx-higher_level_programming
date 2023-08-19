@@ -18,4 +18,4 @@ localhost/{sys.argv[3]}', echo=False)
     states_sorted_by_id = session.query(State).order_by(State.id).all()
     for state in states_sorted_by_id:
         print(f'{state.id}: {state.name}')
-        break;
+        break
