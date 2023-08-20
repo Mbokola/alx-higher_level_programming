@@ -18,5 +18,5 @@ localhost/{sys.argv[3]}')
     states_del = session.query(State).filter(State.name.like('%a%'))
     for state in states_del:
         session.delete(state)
-    session.commit()
+    session.commit()  # QA review this when inside for loop
     session.close()
