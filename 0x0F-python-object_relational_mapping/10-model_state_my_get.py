@@ -20,3 +20,5 @@ localhost/{sys.argv[3]}')
         print(state.id)
     else:
         print("Not found")
+
+    session.close()
