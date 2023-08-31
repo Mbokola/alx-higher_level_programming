@@ -1,3 +1,3 @@
 #!/bin/bash
-# Bash script that takes in a URL, sends a request to that URL, and displays the size of the body of the response
-curl -s -f -L -X DELETE "$1"
+# Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response
+curl -s -X DELETE "$1"
