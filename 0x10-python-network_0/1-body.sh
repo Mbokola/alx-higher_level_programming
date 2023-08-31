@@ -1,3 +1,3 @@
 #!/bin/bash
 # Bash script that takes in a URL, sends a request to that URL, and displays the size of the body of the response
-curl -s -f -L "%{http_code}" -o - "$1"
+curl -s -f -L "$1"
