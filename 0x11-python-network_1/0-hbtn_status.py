@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 0-hbtn_status module """
+""" 0-hbtn_status module - Fetch url using urllib """
 import urllib.request
 
 if __name__ == '__main__':
