@@ -24,6 +24,5 @@ if __name__ == "__main__":
     auth = HTTPBasicAuth(username, passwrd)
     # Make a GET request to the GitHub API to retrieve your user data
     response = requests.get(url, auth=auth)
-    if response.status_code == 200:
-        user_data = response.json()
-        print(user_data.get('id'))
+    user_data = response.json()
+    print(user_data.get('id'))
