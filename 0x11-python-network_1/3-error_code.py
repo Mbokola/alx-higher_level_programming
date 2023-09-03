@@ -12,7 +12,7 @@ of the response (decoded in utf-8).
 
 import sys
 from urllib.request import Request, urlopen
-from urllib.error import URLError
+from urllib.error import HTTPError
 
 if __name__ == "__main__":
     url = sys.argv[1]
@@ -21,6 +21,5 @@ if __name__ == "__main__":
         with urlopen(req) as response:
             content = response.read().decode("utf-8")
             print(content)
-    except URLError as err:
-        if hasattr(err, 'code'):
-            print(f"Error code: {err.reason}")
+    except HTTPError as err:
+        print(f"Error code: {err.code}")
