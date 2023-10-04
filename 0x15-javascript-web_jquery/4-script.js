@@ -1,4 +1,4 @@
-// updates the text color of the <header> element to red (#FF0000) when the user clicks on the tag DIV#red_header
+//adds a <li> element to a list when the user clicks on the tag DIV#add_item:
 $(document).on('click', '#toggle_header', function () {
   const header = $('header');
   if (header.hasClass('red')) {
