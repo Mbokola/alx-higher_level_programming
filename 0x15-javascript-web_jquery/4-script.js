@@ -1,4 +1,4 @@
-//adds a <li> element to a list when the user clicks on the tag DIV#add_item:
+// adds a <li> element to a list when the user clicks on the tag DIV#add_item:
 $(document).on('click', '#toggle_header', function () {
   const header = $('header');
   if (header.hasClass('red')) {
