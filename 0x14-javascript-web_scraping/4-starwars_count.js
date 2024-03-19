@@ -3,9 +3,7 @@
 const request = require('request');
 const apiUrl = process.argv[2];
 
-let foundId;
-
-request(apiUrl, { json:true }, (err, response, body) => {
+request(apiUrl, { json: true }, (err, response, body) => {
   if (err) {
     console.err(err);
     return;
@@ -15,7 +13,7 @@ request(apiUrl, { json:true }, (err, response, body) => {
       const id = url.substring(url.length - 4);
       return id === '/18/';
     });
-    return films
+    return films;
   }).filter((film) => film.length > 0);
-  console.log(found.length)
+  console.log(found.length);
 });
