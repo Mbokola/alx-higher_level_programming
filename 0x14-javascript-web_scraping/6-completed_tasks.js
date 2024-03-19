@@ -16,8 +16,12 @@ request(url, { json: true }, (err, res, body) => {
         obj[user.userId] += 1;
       }
     } else {
-      obj[user.userId] = user.completed ? 1 : 0;
+      if (user.completed) obj[user.userId] = 1;
     }
   });
-  console.log(obj);
+  if (obj) {
+    console.log(obj);
+  } else {
+    console.log(0);
+  }
 });
