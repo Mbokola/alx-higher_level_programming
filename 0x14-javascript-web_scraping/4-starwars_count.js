@@ -10,19 +10,12 @@ request(apiUrl, { json:true }, (err, response, body) => {
     console.err(err);
     return;
   }
-  body.results.map((film) => {
-    const films = film.characters.find((url) => {
+  const found = body.results.map((film) => {
+    const films = film.characters.filter((url) => {
       const id = url.substring(url.length - 4);
-      if (id === '/18/') {
-        request(url, { json:true }, (err, response, body) => {
-          if(err) {
-            console.err(err);
-            return;
-          }
-          if (!foundId) console.log(body.films.length);
-          foundId = true;
-        });
-      }
+      return id === '/18/';
     });
-  });
+    return films
+  }).filter((film) => film.length > 0);
+  console.log(found.length)
 });
