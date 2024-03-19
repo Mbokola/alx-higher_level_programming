@@ -19,9 +19,5 @@ request(url, { json: true }, (err, res, body) => {
       if (user.completed) obj[user.userId] = 1;
     }
   });
-  if (obj) {
-    console.log(obj);
-  } else {
-    console.log(0);
-  }
+  console.log(obj);
 });
