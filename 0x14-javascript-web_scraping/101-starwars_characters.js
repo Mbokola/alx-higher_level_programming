@@ -12,7 +12,7 @@ request(url, { json: true }, async (err, res, body) => {
   }
   for (const characterUrl of body.characters) {
     try {
-      const body = await getRequest(characterUrl)
+      const body = await getRequest(characterUrl);
       console.log(body.name);
     } catch (err) {
       console.error(err);
@@ -20,14 +20,14 @@ request(url, { json: true }, async (err, res, body) => {
   }
 });
 
-function getRequest(url) {
+function getRequest (url) {
   return new Promise((resolve, reject) => {
-    request(url, { json: true } , (err, res, body) => {
+    request(url, { json: true }, (err, res, body) => {
       if (err) {
-        reject(err)
+        reject(err);
       } else {
-        resolve(body)
+        resolve(body);
       }
     });
   });
-};
+}
