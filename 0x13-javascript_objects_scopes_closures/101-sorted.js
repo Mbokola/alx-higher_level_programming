@@ -3,10 +3,10 @@
 const dict = require('./101-data');
 const dictValue = dict.dict;
 
-const newDict = {}
+const newDict = {};
 
-for (let key in dictValue) {
-  let value = dictValue[key];
+for (const key in dictValue) {
+  const value = dictValue[key];
   if (!(value in newDict)) {
     newDict[value] = [key];
   } else {
